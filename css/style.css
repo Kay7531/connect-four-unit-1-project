@@ -10,6 +10,9 @@ body{
     width: 630px;
     display: flex;
     flex-wrap: wrap;
+    background-color: blue;
+    border: 10px solid navy;
+    margin:auto
 }
 .board > div{
     height: 90px;
