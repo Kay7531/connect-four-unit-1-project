@@ -5,7 +5,6 @@ body{
 
 
 .board {
-    border: 1px solid black;
     height: 540px;
     width: 630px;
     display: flex;
@@ -14,9 +13,15 @@ body{
     border: 10px solid navy;
     margin:auto
 }
-.board > div{
-    height: 90px;
-    width: 90px;
+.board >div {
+    background-color: white;
+    height: 83px;
+    width: 83px;
+    border: 3px solid navy;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 2px 1px;
 }
 
 .player-one{
