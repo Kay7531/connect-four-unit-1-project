@@ -13,7 +13,7 @@ body{
     border: 10px solid navy;
     margin:auto
 }
-.board >div {
+.tile {
     background-color: white;
     height: 83px;
     width: 83px;
