@@ -62,3 +62,27 @@ resetBtnEl.addEventListener("click", init)
 
 /*---------------------------------Functions----------------------------------*/
 
+function init(){ 
+    board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    turn = 1
+    winner = false
+    tie = false 
+}
+
+function render(){
+
+}
+
+function upgradeBoard(){
+    board.forEach(function(element,idx){
+        let sqrValue= element
+        if (element === null){ 
+         squares[idx].style.backgroundColor = 'white'
+        } else if( element === 1 ){
+         squares[idx].style.backgroundColor = 'red'
+        } else if (element === -1){
+         squares[idx].style.backgroundColor= 'yellow'
+        }
+     })
+
+}
