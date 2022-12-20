@@ -63,7 +63,14 @@ resetBtnEl.addEventListener("click", init)
 /*---------------------------------Functions----------------------------------*/
 
 function init(){ 
-    board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    board = [
+        null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null, 
+        null, null, null, null, null, null, null, 
+        null, null, null, null, null, null, null, 
+        null, null, null, null, null, null, null, 
+        null, null, null, null, null, null, null];
+
     turn = 1
     winner = false
     tie = false 
@@ -116,8 +123,13 @@ function handleClick(evt){
     } else if (winner === true){
         return
     }
+   let startPoint = 35
+   while(board[sqIdx + startPoint] !== null){
+    startPoint -= 7
+   }
+   board[sqIdx + startPoint] = turn
 
-placePiece(sqIdx)
+// placePiece(sqIdx)
 checkForTie()
 checkForWinner()
 switchPlayerTurn()
@@ -158,3 +170,15 @@ function switchPlayerTurn(){
       return turn *= -1
     }
 }
+
+function dropPiece(){
+    squares.forEach(function(element,idx){
+        element.onmouseenter = ()=> {
+            // onMouseEnteredColumn(idx % 7);
+            console.log
+        }
+    })
+
+
+}
+
