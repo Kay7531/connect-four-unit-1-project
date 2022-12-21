@@ -182,3 +182,5 @@ function dropPiece(){
 
 }
 
+//The minimax with alphbeta pruning
+//transposition table
