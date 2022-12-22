@@ -65,7 +65,7 @@ resetBtnEl.addEventListener("click", init)
 document.addEventListener("DOMContentLoaded", (e) =>{
     setTimeout(() => {
         startEl.classList.add('display-none');
-    },7000);
+    },3000);
 })
 
 /*----------------------------Drag and drop functionality---------------------*/
@@ -209,16 +209,7 @@ function switchPlayerTurn(){
     }
 }
 
-function dropPiece(){
-    squares.forEach(function(element,idx){
-        element.onmouseenter = ()=> {
-            // onMouseEnteredColumn(idx % 7);
-            console.log
-        }
-    })
 
-
-}
 
 function pieceSound(){
     laserSound.volume = 0.25
