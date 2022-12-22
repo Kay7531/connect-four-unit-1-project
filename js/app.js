@@ -65,7 +65,7 @@ resetBtnEl.addEventListener("click", init)
 document.addEventListener("DOMContentLoaded", (e) =>{
     setTimeout(() => {
         startEl.classList.add('display-none');
-    },2000);
+    },7000);
 })
 
 /*----------------------------Drag and drop functionality---------------------*/
