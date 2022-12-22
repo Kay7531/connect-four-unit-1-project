@@ -5,20 +5,20 @@
 
 
 
-##[Play the game here!](https://connect-4-unit-1.netlify.app/)
+## [Play the game here!](https://connect-4-unit-1.netlify.app/)
 
 
 ## Technologies used 🛠️
-*HTML
-*Javascript
-*CSS
-*git
+* HTML
+* Javascript
+* CSS
+* git
 
-##Credits
-##Recent Changes
+## Credits
+## Recent Changes
 
 
-##Ice Box🧊
--[]Work on animating the piece so it looks like its dropping down the board.
--[]Implement AI so player is able to play computer with various various levels of difficulty based on the algorithm.
--[]Keep score of wins on a scoreboard.
+## Ice Box🧊
+- [ ] Work on animating the piece so it looks like its dropping down the board.
+- [ ] Implement AI so player is able to play computer with various various levels of difficulty based on the algorithm.
+- [ ] Keep score of wins on a scoreboard.
