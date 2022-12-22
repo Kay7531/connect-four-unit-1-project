@@ -48,6 +48,7 @@ let winningCombos = [
 
 /*-----------------------------------Variables--------------------------------*/
 let board, turn, winner, tie
+let laserSound = new Audio('../assets/https:/i.redd.it/shoot02wav-14562.mp3')
 
 /*--------------------------Cached Element Refernces--------------------------*/
 const squares = document.querySelectorAll(".tile")
@@ -165,7 +166,7 @@ function handleClick(evt){
     startPoint -= 7
    }
    board[sqIdx + startPoint] = turn
-
+pieceSound()
 // placePiece(sqIdx)
 checkForTie()
 checkForWinner()
@@ -219,5 +220,7 @@ function dropPiece(){
 
 }
 
-//The minimax with alphbeta pruning
-//transposition table
+function pieceSound(){
+    laserSound.volume = 0.25
+    laserSound.play()
+}
