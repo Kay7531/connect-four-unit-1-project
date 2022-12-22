@@ -48,5 +48,44 @@ body{
     border-radius: 10px;
 }
 
+.start{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color:white;
+    z-index: 200;
+    text-align: center;
+    line-height: 90vh;
 
-background image yellow: https://i.pinimg.com/564x/ab/bf/be/abbfbedb6b81062f98d759b9145f19f2.jpg
+}
+
+
+.start.display-none{
+    position: fixed;
+    opacity:0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color:white;
+    z-index: -10;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 0.5s;
+
+}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
+    }
+}
+
+.fade-in{
+    opacity:0;
+    animation:fadeIn 1s ease-in forwards;
+}

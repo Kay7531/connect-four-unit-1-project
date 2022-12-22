@@ -54,12 +54,18 @@ const squares = document.querySelectorAll(".tile")
 const msg = document.getElementById("msg")
 const resetBtnEl= document.getElementById("reset")
 const pieceEl = document.getElementById("piece")
+const startEl = document.querySelector(".start")
 /*----------------------------------Event Listeners---------------------------*/
 window.addEventListener("load", init)
 squares.forEach(function (sqr){
     sqr.addEventListener("click", handleClick)
 }) 
 resetBtnEl.addEventListener("click", init)
+document.addEventListener("DOMContentLoaded", (e) =>{
+    setTimeout(() => {
+        startEl.classList.add('display-none');
+    },2000);
+})
 
 /*----------------------------Drag and drop functionality---------------------*/
 let mousePosition;
@@ -120,13 +126,9 @@ function upgradeBoard(){
         if (element === null){ 
          squares[idx].style.backgroundColor = 'white'
         } else if( element === 1 ){
-         squares[idx].style.backgroundImage = "url(https://i.pinimg.com/564x/a3/86/a9/a386a98349a64c00d54a93d4c194ff76.jpg)"
-         squares[idx].style.backgroundSize= "67px 67px"
-         squares[idx].style.backgroundRepeat= "no-repeat"
-         squares[idx].style.backgroundAttachment= "fixed"
-         squares[idx].style.backgroundPosition= "center"
+         squares[idx].style.backgroundColor= "red"
         } else if (element === -1){
-         squares[idx].style.backgroundImage= 'yellow'
+         squares[idx].style.backgroundColor= "yellow"
         }
      })
 
