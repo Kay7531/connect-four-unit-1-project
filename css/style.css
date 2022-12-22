@@ -5,6 +5,9 @@ body{
     background-repeat: no-repeat;
     background-size: 2000px 2000px;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 #piece{
@@ -23,15 +26,16 @@ body{
     width: 530px;
     display: flex;
     flex-wrap: wrap;
-    background-color: blue;
-    border: 10px solid navy;
-    margin:auto
+    background-color: gray;
+    border: 10px solid gray;
+    margin-top: 100px 
+
 }
 .tile {
-    background-color: white;
+    background-color: gray;
     height: 63px;
     width: 63px;
-    border: 3px solid navy;
+    border: 3px solid white;
     border-radius: 50%;
     display: flex;
     align-items: center;

@@ -125,7 +125,7 @@ function upgradeBoard(){
     board.forEach(function(element,idx){
         let sqrValue= element
         if (element === null){ 
-         squares[idx].style.backgroundColor = 'white'
+         squares[idx].style.backgroundColor = 'gray'
         } else if( element === 1 ){
          squares[idx].style.backgroundColor= "red"
         } else if (element === -1){
