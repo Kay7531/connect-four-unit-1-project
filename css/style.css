@@ -1,8 +1,22 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-}
+    background-image: url("https://preview.redd.it/ptyvlilmng741.png?width=960&crop=smart&auto=webp&s=447958db65bd3cc93845100061bb2def818083b6");
+    background-repeat: no-repeat;
+    background-size: 2000px 2000px;
+    background-position: center;
 
+}
+#piece{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    height:67px;
+    width:67px;
+    border-radius:50%;
+    background-image: url("https://i.pinimg.com/564x/a3/86/a9/a386a98349a64c00d54a93d4c194ff76.jpg");
+    background-size: 67px 67px;
+ 
+}
 
 .board {
     height: 440px;
@@ -33,3 +47,6 @@ body{
     background-color: blue;
     border-radius: 10px;
 }
+
+
+background image yellow: https://i.pinimg.com/564x/ab/bf/be/abbfbedb6b81062f98d759b9145f19f2.jpg

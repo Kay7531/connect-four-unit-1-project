@@ -53,6 +53,7 @@ let board, turn, winner, tie
 const squares = document.querySelectorAll(".tile")
 const msg = document.getElementById("msg")
 const resetBtnEl= document.getElementById("reset")
+const pieceEl = document.getElementById("piece")
 /*----------------------------------Event Listeners---------------------------*/
 window.addEventListener("load", init)
 squares.forEach(function (sqr){
@@ -60,6 +61,36 @@ squares.forEach(function (sqr){
 }) 
 resetBtnEl.addEventListener("click", init)
 
+/*----------------------------Drag and drop functionality---------------------*/
+let mousePosition;
+let offset = [0,0];
+let isDown = false;
+
+
+pieceEl.addEventListener('mousedown', function(e) {
+    isDown = true;
+    offset = [
+        pieceEl.offsetLeft - e.clientX,
+        pieceEl.offsetTop - e.clientY
+    ];
+}, true);
+pieceEl.addEventListener('mouseup', function() {
+    isDown = false;
+}, true);
+
+pieceEl.addEventListener('mousemove', function(event) {
+    event.preventDefault();
+    if (isDown) {
+        mousePosition = {
+
+            x : event.clientX,
+            y : event.clientY
+
+        };
+        pieceEl.style.left = (mousePosition.x + offset[0]) + 'px';
+        pieceEl.style.top  = (mousePosition.y + offset[1]) + 'px';
+    }
+}, true);
 /*---------------------------------Functions----------------------------------*/
 
 function init(){ 
@@ -89,9 +120,13 @@ function upgradeBoard(){
         if (element === null){ 
          squares[idx].style.backgroundColor = 'white'
         } else if( element === 1 ){
-         squares[idx].style.backgroundColor = 'red'
+         squares[idx].style.backgroundImage = "url(https://i.pinimg.com/564x/a3/86/a9/a386a98349a64c00d54a93d4c194ff76.jpg)"
+         squares[idx].style.backgroundSize= "67px 67px"
+         squares[idx].style.backgroundRepeat= "no-repeat"
+         squares[idx].style.backgroundAttachment= "fixed"
+         squares[idx].style.backgroundPosition= "center"
         } else if (element === -1){
-         squares[idx].style.backgroundColor= 'yellow'
+         squares[idx].style.backgroundImage= 'yellow'
         }
      })
 
