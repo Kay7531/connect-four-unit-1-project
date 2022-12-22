@@ -54,7 +54,10 @@ body{
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-image: url(https://art.pixilart.com/59a48631f248f48.gif);
+    background-repeat: no-repeat;
+    background-size: 2000px 2000px;
+    background-position: center;
     color:white;
     z-index: 200;
     text-align: center;
