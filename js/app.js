@@ -49,13 +49,14 @@ let winningCombos = [
 /*-----------------------------------Variables--------------------------------*/
 let board, turn, winner, tie
 let laserSound = new Audio('../assets/https:/i.redd.it/shoot02wav-14562.mp3')
-
+let victorySound = new Audio('../assets/https:/i.redd.it/lady-of-the-80x27s-128379 (1).mp3')
 /*--------------------------Cached Element Refernces--------------------------*/
 const squares = document.querySelectorAll(".tile")
 const msg = document.getElementById("msg")
 const resetBtnEl= document.getElementById("reset")
 const pieceEl = document.getElementById("piece")
 const startEl = document.querySelector(".start")
+const popupEl = document.querySelector(".popup")
 /*----------------------------------Event Listeners---------------------------*/
 window.addEventListener("load", init)
 squares.forEach(function (sqr){
@@ -66,39 +67,11 @@ resetBtnEl.addEventListener("click", init)
 document.addEventListener("DOMContentLoaded", (e) =>{
     setTimeout(() => {
         startEl.classList.add('display-none');
-    },3000);
+    },2000);
 })
 
 /*----------------------------Drag and drop functionality---------------------*/
-let mousePosition;
-let offset = [0,0];
-let isDown = false;
 
-
-pieceEl.addEventListener('mousedown', function(e) {
-    isDown = true;
-    offset = [
-        pieceEl.offsetLeft - e.clientX,
-        pieceEl.offsetTop - e.clientY
-    ];
-}, true);
-pieceEl.addEventListener('mouseup', function() {
-    isDown = false;
-}, true);
-
-pieceEl.addEventListener('mousemove', function(event) {
-    event.preventDefault();
-    if (isDown) {
-        mousePosition = {
-
-            x : event.clientX,
-            y : event.clientY
-
-        };
-        pieceEl.style.left = (mousePosition.x + offset[0]) + 'px';
-        pieceEl.style.top  = (mousePosition.y + offset[1]) + 'px';
-    }
-}, true);
 /*---------------------------------Functions----------------------------------*/
 
 function init(){ 
@@ -150,8 +123,12 @@ function updateMessage(){
         msg.textContent ="It's a tie."
      } else if ((winner === true) && (turn === -1)) {
         msg.textContent= "Player 1 WINS"
+        return openPopup()
+       
      } else if ((winner === true) && (turn === 1)) {
         msg.textContent= "Player 2 WINS"
+        return openPopup()
+      
      } else {
         msg.textContent = ""
      }
@@ -214,9 +191,22 @@ function switchPlayerTurn(){
     }
 }
 
-
-
 function pieceSound(){
     laserSound.volume = 0.25
     laserSound.play()
+}
+
+function openPopup(){
+    popupEl.classList.add("open-popup");
+    return winSound();
+}
+
+function closePopup(){
+    popupEl.classList.remove("open-popup");
+    victorySound.volume = 0
+}
+
+function winSound(){
+    victorySound.volume = 0.25
+    victorySound.play()
 }
