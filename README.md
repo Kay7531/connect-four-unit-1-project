@@ -21,6 +21,10 @@
 
 * ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 
+## Credits 
+* ![Tutorial on Pop-up](https://www.youtube.com/watch?v=AF6vGYIyV8M)
+* ![Sound bites](https://pixabay.com/sound-effects/)
+
 
 
 
