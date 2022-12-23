@@ -122,11 +122,11 @@ function updateMessage(){
     } else if ((winner === false) && (tie === true)){
         msg.textContent ="It's a tie."
      } else if ((winner === true) && (turn === -1)) {
-        msg.textContent= "Player 1 WINS"
+        msg.textContent= "Player 1 WINS!"
         return openPopup()
        
      } else if ((winner === true) && (turn === 1)) {
-        msg.textContent= "Player 2 WINS"
+        msg.textContent= "Player 2 WINS!"
         return openPopup()
       
      } else {
