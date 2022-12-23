@@ -62,6 +62,7 @@ squares.forEach(function (sqr){
     sqr.addEventListener("click", handleClick)
 }) 
 resetBtnEl.addEventListener("click", init)
+
 document.addEventListener("DOMContentLoaded", (e) =>{
     setTimeout(() => {
         startEl.classList.add('display-none');
@@ -113,6 +114,10 @@ function init(){
     winner = false
     tie = false 
     render()
+    board.forEach(function(element,idx){
+        squares[idx].innerHTML = ""
+    })
+   
 }
 
 function render(){
@@ -125,11 +130,11 @@ function upgradeBoard(){
     board.forEach(function(element,idx){
         let sqrValue= element
         if (element === null){ 
-         squares[idx].style.backgroundColor = 'gray'
+         squares[idx].style.backgroundColor= "gray"
         } else if( element === 1 ){
-         squares[idx].style.backgroundColor= "red"
+         squares[idx].innerHTML = `<img src="https://i.pinimg.com/564x/a3/86/a9/a386a98349a64c00d54a93d4c194ff76.jpg" style="border-radius:50%; height:67px; width:67px;" >`
         } else if (element === -1){
-         squares[idx].style.backgroundColor= "yellow"
+         squares[idx].innerHTML =`<img src="https://s3-eu-west-1.amazonaws.com/yi-files/content/2019/04/5cbf35e4c824a.jpg"style="border-radius:50%; height:67px; width:67px;" >`
         }
      })
 

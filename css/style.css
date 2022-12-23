@@ -10,16 +10,7 @@ body{
     align-items: center;
 
 }
-#piece{
-    position:absolute;
-    transform:translate(-50%,-50%);
-    height:67px;
-    width:67px;
-    border-radius:50%;
-    background-image: url("https://i.pinimg.com/564x/a3/86/a9/a386a98349a64c00d54a93d4c194ff76.jpg");
-    background-size: 67px 67px;
- 
-}
+
 
 .board {
     height: 440px;
@@ -50,8 +41,6 @@ body{
     text-align: center;
     border: 3px solid rgb(59, 55, 55);
     border-radius: 30px;
-
-
 
 }
 
@@ -99,3 +88,5 @@ body{
     opacity:0;
     animation:fadeIn 1s ease-in forwards;
 }
+
+
