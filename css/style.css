@@ -17,8 +17,8 @@ body{
     width: 530px;
     display: flex;
     flex-wrap: wrap;
-    background-color: gray;
-    border: 10px solid gray;
+    /* background-color: gray; */
+    /* border: 10px solid gray; */
     margin-top: 100px 
 
 }
@@ -30,7 +30,7 @@ body{
     border-radius: 50%;
     display: flex;
     align-items: center;
-    padding: 0px 0px 5px 5px;
+    padding: 0px 0px 0px 0px;
 }
 
 #reset{
